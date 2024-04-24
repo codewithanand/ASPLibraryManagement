@@ -123,24 +123,6 @@ namespace LibraryManagementSystem
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
 
         /// <summary>
-        /// Quantity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Quantity;
-
-        /// <summary>
-        /// RequiredFieldValidator7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
-
-        /// <summary>
         /// ShelfLocation control.
         /// </summary>
         /// <remarks>

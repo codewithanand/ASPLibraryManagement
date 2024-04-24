@@ -136,6 +136,8 @@
     <Content Include="BookAdd.aspx" />
     <Content Include="BookDelete.aspx" />
     <Content Include="BookEdit.aspx" />
+    <Content Include="BookIssue.aspx" />
+    <Content Include="BookReturn.aspx" />
     <Content Include="Books.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Global.asax" />
@@ -177,6 +179,20 @@
     </Compile>
     <Compile Include="BookEdit.aspx.designer.cs">
       <DependentUpon>BookEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookIssue.aspx.cs">
+      <DependentUpon>BookIssue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookIssue.aspx.designer.cs">
+      <DependentUpon>BookIssue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookReturn.aspx.cs">
+      <DependentUpon>BookReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookReturn.aspx.designer.cs">
+      <DependentUpon>BookReturn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Books.aspx.cs">
       <DependentUpon>Books.aspx</DependentUpon>

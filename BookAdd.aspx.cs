@@ -21,14 +21,13 @@ namespace LibraryManagementSystem
         protected void BookAddButton_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand insertCmd = new SqlCommand("INSERT INTO [books] (title, author, isbn, genre, publication_year, pages, quantity, shelf_location, created_at, updated_at) VALUES (@title, @author, @isbn, @genre, @publication_year, @pages, @quantity, @shelf_location, @created_at, @updated_at)", con);
+            SqlCommand insertCmd = new SqlCommand("INSERT INTO [books] (title, author, isbn, genre, publication_year, pages, shelf_location, created_at, updated_at) VALUES (@title, @author, @isbn, @genre, @publication_year, @pages, @shelf_location, @created_at, @updated_at)", con);
             insertCmd.Parameters.AddWithValue("@title", BookTitle.Text.ToString());
             insertCmd.Parameters.AddWithValue("@author", Author.Text.ToString());
             insertCmd.Parameters.AddWithValue("@isbn", IsbnNumber.Text.ToString());
             insertCmd.Parameters.AddWithValue("@genre", Genre.Text.ToString());
             insertCmd.Parameters.AddWithValue("@publication_year", PublicationYear.Text.ToString());
             insertCmd.Parameters.AddWithValue("@pages", Pages.Text.ToString());
-            insertCmd.Parameters.AddWithValue("@quantity", Quantity.Text.ToString());
             insertCmd.Parameters.AddWithValue("@shelf_location", ShelfLocation.Text.ToString());
             insertCmd.Parameters.AddWithValue("@created_at", DateTime.Now);
             insertCmd.Parameters.AddWithValue("@updated_at", DateTime.Now);

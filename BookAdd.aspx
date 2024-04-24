@@ -48,11 +48,6 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*Required" ControlToValidate="Pages" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-group mt-3">
-                            <label for="Quantity">Quantity</label>
-                            <asp:TextBox CssClass="form-control" ID="Quantity" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*Required" ControlToValidate="Quantity" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-                        </div>
-                        <div class="form-group mt-3">
                             <label for="ShelfLocation">Shelf Location</label>
                             <asp:TextBox CssClass="form-control" ID="ShelfLocation" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="*Required" ControlToValidate="ShelfLocation" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>

@@ -11,79 +11,79 @@ namespace LibraryManagementSystem
 {
 
 
-    public partial class BookEdit
+    public partial class BookIssue
     {
 
         /// <summary>
-        /// BookTitle control.
+        /// StudentId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BookTitle;
+        protected global::System.Web.UI.WebControls.TextBox StudentId;
 
         /// <summary>
-        /// Author control.
+        /// SearchButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Author;
+        protected global::System.Web.UI.WebControls.Button SearchButton;
 
         /// <summary>
-        /// IsbnNumber control.
+        /// RefreshButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IsbnNumber;
+        protected global::System.Web.UI.WebControls.Button RefreshButton;
 
         /// <summary>
-        /// Genre control.
+        /// BookIdPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Genre;
+        protected global::System.Web.UI.WebControls.PlaceHolder BookIdPlaceHolder;
 
         /// <summary>
-        /// PublicationYear control.
+        /// BookISBN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PublicationYear;
+        protected global::System.Web.UI.WebControls.TextBox BookISBN;
 
         /// <summary>
-        /// Pages control.
+        /// IssueButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Pages;
+        protected global::System.Web.UI.WebControls.Button IssueButton;
 
         /// <summary>
-        /// ShelfLocation control.
+        /// StudentPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ShelfLocation;
+        protected global::System.Web.UI.WebControls.PlaceHolder StudentPlaceHolder;
 
         /// <summary>
-        /// BookUpdateButton control.
+        /// IssuedBooksistView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BookUpdateButton;
+        protected global::System.Web.UI.WebControls.ListView IssuedBooksistView;
     }
 }

@@ -38,21 +38,21 @@ namespace LibraryManagementSystem
             Genre.Text = ds.Tables[0].Rows[0]["genre"].ToString();
             PublicationYear.Text = ds.Tables[0].Rows[0]["publication_year"].ToString();
             Pages.Text = ds.Tables[0].Rows[0]["pages"].ToString();
-            Quantity.Text = ds.Tables[0].Rows[0]["quantity"].ToString();
             ShelfLocation.Text = ds.Tables[0].Rows[0]["shelf_location"].ToString();
         }
 
         protected void BookUpdateButton_Click(object sender, EventArgs e)
         {
+            string bookId = Request.QueryString["bookId"].ToString();
             con.Open();
-            SqlCommand updateCmd = new SqlCommand("UPDATE [books] SET title=@title, author=@author, isbn=@isbn, genre=@genre, publication_year=@publication_year, pages=@pages, quantity=@quantity, shelf_location=@shelf_location, updated_at=@updated_at", con);
+            SqlCommand updateCmd = new SqlCommand("UPDATE [books] SET title=@title, author=@author, isbn=@isbn, genre=@genre, publication_year=@publication_year, pages=@pages, shelf_location=@shelf_location, updated_at=@updated_at WHERE id=@id", con);
+            updateCmd.Parameters.AddWithValue("@id", bookId);
             updateCmd.Parameters.AddWithValue("@title", BookTitle.Text.ToString());
             updateCmd.Parameters.AddWithValue("@author", Author.Text.ToString());
             updateCmd.Parameters.AddWithValue("@isbn", IsbnNumber.Text.ToString());
             updateCmd.Parameters.AddWithValue("@genre", Genre.Text.ToString());
             updateCmd.Parameters.AddWithValue("@publication_year", PublicationYear.Text.ToString());
             updateCmd.Parameters.AddWithValue("@pages", Pages.Text.ToString());
-            updateCmd.Parameters.AddWithValue("@quantity", Quantity.Text.ToString());
             updateCmd.Parameters.AddWithValue("@shelf_location", ShelfLocation.Text.ToString());
             updateCmd.Parameters.AddWithValue("@updated_at", DateTime.Now);
             updateCmd.ExecuteNonQuery();

@@ -44,8 +44,10 @@ namespace LibraryManagementSystem
 
         protected void UpdateStudentButton_Click(object sender, EventArgs e)
         {
+            string studentId = Request.QueryString["studentId"];
             con.Open();
-            SqlCommand updateCmd = new SqlCommand("UPDATE [students] SET s_id=@s_id, name=@name, fathers_name=@fathers_name, mothers_name=@mothers_name, date_of_birth=@date_of_birth, class=@class, roll=@roll, section=@section, admission_year=@admission_year, updated_at=@updated_at", con);
+            SqlCommand updateCmd = new SqlCommand("UPDATE [students] SET s_id=@s_id, name=@name, fathers_name=@fathers_name, mothers_name=@mothers_name, date_of_birth=@date_of_birth, class=@class, roll=@roll, section=@section, admission_year=@admission_year, updated_at=@updated_at WHERE id=@id", con);
+            updateCmd.Parameters.AddWithValue("@id", studentId);
             updateCmd.Parameters.AddWithValue("@s_id", StudentId.Text.ToString());
             updateCmd.Parameters.AddWithValue("@name", StudentName.Text.ToString());
             updateCmd.Parameters.AddWithValue("@fathers_name", FathersName.Text.ToString());

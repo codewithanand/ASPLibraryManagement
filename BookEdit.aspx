@@ -42,10 +42,6 @@
                             <asp:TextBox CssClass="form-control" ID="Pages" runat="server"></asp:TextBox>
                         </div>
                         <div class="form-group mt-3">
-                            <label for="Quantity">Quantity</label>
-                            <asp:TextBox CssClass="form-control" ID="Quantity" runat="server"></asp:TextBox>
-                        </div>
-                        <div class="form-group mt-3">
                             <label for="ShelfLocation">Shelf Location</label>
                             <asp:TextBox CssClass="form-control" ID="ShelfLocation" runat="server"></asp:TextBox>
                         </div>
