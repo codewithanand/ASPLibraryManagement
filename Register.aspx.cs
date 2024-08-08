@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
+using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -44,6 +45,8 @@ namespace LibraryManagementSystem
                     insertCmd.ExecuteNonQuery();
                     con.Close();
 
+                    SendEmail();
+
                     Response.Redirect("Login.aspx");
                 }
                 catch (Exception ex) {
@@ -51,6 +54,41 @@ namespace LibraryManagementSystem
                     ErrorMessage.Text = "Something went wrong";
                 }
             }
+        }
+
+        protected void SendEmail()
+        {
+            MailMessage mail = new MailMessage();
+            mail.To.Add(EmailTextBox.Text.Trim());
+            mail.From = new MailAddress("bipulproject995@gmail.com");
+            mail.Subject = "Thank you for registering with us.";
+            string emailBody = "";
+
+            // Add email body here
+
+            emailBody += "<div style='background-color: #444; color: #fff; font-family: sans-serif; text-align: center; padding:30px 20px;'>";
+            emailBody += "<div><span style='color: #3EC1D5;'> Library </span><span style='color: gold;'> Management </span></div>";
+            emailBody += "<div></div>";
+            emailBody += "<div><h1> Thank you! </h1></div>";
+            
+            emailBody += "<p>We are delighted to inform you that your registration on the Library Management System has been successfully completed. You can now enjoy the full benefits of our system, including browsing our collection, reserving books, and managing your account.</p>";
+            emailBody += "<p>Please ensure that you keep your login credentials safe and do not share them with anyone.</p>";
+            emailBody += "<p>Thank you for choosing our library management system. We look forward to serving you..</p>";
+            emailBody += "</div>";
+            emailBody += "<div style='text-align: center; background-color: #eef1fa;'>";
+            emailBody += "";
+            emailBody += "</div>";
+
+            mail.Body = emailBody;
+            mail.IsBodyHtml = true;
+
+            SmtpClient smtp = new SmtpClient();
+            smtp.Port = 587;
+            smtp.EnableSsl = true;
+            smtp.UseDefaultCredentials = false;
+            smtp.Host = "smtp.gmail.com";
+            smtp.Credentials = new System.Net.NetworkCredential("bipulproject995@gmail.com", "jrzmxygq dxmslecx");
+            smtp.Send(mail);
         }
 
         protected bool UserExists(string email)

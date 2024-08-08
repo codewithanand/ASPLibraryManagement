@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.aspx" />
     <Content Include="assets\css\bootstrap-grid.css" />
     <Content Include="assets\css\bootstrap-grid.min.css" />
     <Content Include="assets\css\bootstrap-grid.rtl.css" />
@@ -125,6 +126,9 @@
     <Content Include="assets\img\bootstrap-docs.png" />
     <Content Include="assets\img\bootstrap-logo-white.svg" />
     <Content Include="assets\img\bootstrap-logo.svg" />
+    <Content Include="assets\img\contact.jpg" />
+    <Content Include="assets\img\contact.png" />
+    <Content Include="assets\img\library.jpg" />
     <Content Include="assets\img\user-icon.png" />
     <Content Include="assets\js\bootstrap.bundle.js" />
     <Content Include="assets\js\bootstrap.bundle.min.js" />
@@ -135,15 +139,18 @@
     <Content Include="assets\js\sidebars.js" />
     <Content Include="BookAdd.aspx" />
     <Content Include="BookDelete.aspx" />
+    <Content Include="BookDues.aspx" />
     <Content Include="BookEdit.aspx" />
     <Content Include="BookIssue.aspx" />
     <Content Include="BookReturn.aspx" />
     <Content Include="Books.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Pricing.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="StudentAdd.aspx" />
     <Content Include="StudentDelete.aspx" />
@@ -152,6 +159,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminMasterPage.Master.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,6 +186,13 @@
     </Compile>
     <Compile Include="BookDelete.aspx.designer.cs">
       <DependentUpon>BookDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookDues.aspx.cs">
+      <DependentUpon>BookDues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookDues.aspx.designer.cs">
+      <DependentUpon>BookDues.aspx</DependentUpon>
     </Compile>
     <Compile Include="BookEdit.aspx.cs">
       <DependentUpon>BookEdit.aspx</DependentUpon>
@@ -200,6 +221,13 @@
     </Compile>
     <Compile Include="Books.aspx.designer.cs">
       <DependentUpon>Books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -238,6 +266,13 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pricing.aspx.cs">
+      <DependentUpon>Pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pricing.aspx.designer.cs">
+      <DependentUpon>Pricing.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">

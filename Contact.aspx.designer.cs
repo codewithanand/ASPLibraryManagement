@@ -11,7 +11,7 @@ namespace LibraryManagementSystem
 {
 
 
-    public partial class Home
+    public partial class Contact
     {
 
         /// <summary>

@@ -73,11 +73,11 @@ namespace LibraryManagementSystem
         protected void IssueBook(string bookId, string studentId)
         {
             con.Open();
-            SqlCommand insertCmd = new SqlCommand("INSERT INTO [issued_books] (book_id, student_id, issue_date, return_date, created_at, updated_at) VALUES (@book_id, @student_id, @issue_date, @return_date, @created_at, @updated_at)", con);
+            SqlCommand insertCmd = new SqlCommand("INSERT INTO [issued_books] (book_id, student_id, issuing_date, returning_date, created_at, updated_at) VALUES (@book_id, @student_id, @issuing_date, @returning_date, @created_at, @updated_at)", con);
             insertCmd.Parameters.AddWithValue("@book_id", bookId);
             insertCmd.Parameters.AddWithValue("@student_id", studentId);
-            insertCmd.Parameters.AddWithValue("@issue_date", DateTime.Now.ToString("yyyy-MM-dd"));
-            insertCmd.Parameters.AddWithValue("@return_date", DateTime.Now.AddDays(7).ToString("yyyy-MM-dd"));
+            insertCmd.Parameters.AddWithValue("@issuing_date", DateTime.Now.ToString("yyyy-MM-dd"));
+            insertCmd.Parameters.AddWithValue("@returning_date", DateTime.Now.AddDays(7).ToString("yyyy-MM-dd"));
             insertCmd.Parameters.AddWithValue("@created_at", DateTime.Now);
             insertCmd.Parameters.AddWithValue("@updated_at", DateTime.Now);
             insertCmd.ExecuteNonQuery();
@@ -87,7 +87,7 @@ namespace LibraryManagementSystem
         protected DataSet GetIssueBooks(string studentId)
         {
             con.Open();
-            SqlCommand getCmd = new SqlCommand("SELECT * FROM [issued_books] INNER JOIN [students] ON issued_books.student_id=students.id WHERE students.id=@student_id AND is_returned=0", con);
+            SqlCommand getCmd = new SqlCommand("SELECT * FROM [issued_books] INNER JOIN [books] ON books.id=issued_books.book_id INNER JOIN [students] ON issued_books.student_id=students.id WHERE students.id=@student_id AND is_returned=0", con);
             getCmd.Parameters.AddWithValue("@student_id", studentId);
             SqlDataAdapter adapter = new SqlDataAdapter(getCmd);
             DataSet ds = new DataSet();

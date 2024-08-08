@@ -45,13 +45,13 @@
                             <ItemTemplate>
                                 <div class="border rounded p-3 mb-3">
                                     <p>
-                                        #ISBN120000 <strong>Book Name</strong>
+                                        #<%# Eval("isbn") %> <strong><%# Eval("title") %></strong>
                                     </p>
                                     <p>
-                                        Date of Issue: <strong>20-04-2024</strong>
+                                        Date of Issue: <strong><%# DataBinder.Eval(Container.DataItem, "issuing_date", "{0:dd/MM/yyyy}") %></strong>
                                     </p>
                                     <p>
-                                        Date of Return: <strong>24-04-2024</strong>
+                                        Date of Return: <strong><%# DataBinder.Eval(Container.DataItem, "returning_date", "{0:dd/MM/yyyy}") %></strong>
                                     </p>
                                 </div>
                             </ItemTemplate>

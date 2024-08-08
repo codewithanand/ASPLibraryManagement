@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container py-5">
-        <div class="row">
+        <div class="row mb-2">
             <div class="col-md-3 mb-3">
                 <a href="BookIssue.aspx" class="card shadow bg-info text-white text-decoration-none px-4 py-5">
                     <div class="d-flex flex-column justify-content-center align-items-center">
@@ -34,6 +34,16 @@
                     <div class="d-flex flex-column justify-content-center align-items-center">
                         <i style="font-size: 50px;" class="fa-solid fa-graduation-cap mb-3"></i>
                         <h3 class="text-uppercase">Students</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <a href="BookDues.aspx" class="card shadow bg-primary text-white text-decoration-none px-4 py-5">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <i style="font-size: 50px;" class="fa-solid fa-upload mb-3"></i>
+                        <h3 class="text-uppercase">Dues</h3>
                     </div>
                 </a>
             </div>
